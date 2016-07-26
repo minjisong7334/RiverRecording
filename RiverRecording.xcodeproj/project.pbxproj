@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A7B1D4728FD0014805A /* AppDelegate.swift */; };
+		4FF99A7E1D4728FD0014805A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A7D1D4728FD0014805A /* ViewController.swift */; };
+		4FF99A811D4728FD0014805A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A7F1D4728FD0014805A /* Main.storyboard */; };
+		4FF99A831D4728FD0014805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A821D4728FD0014805A /* Assets.xcassets */; };
+		4FF99A861D4728FD0014805A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */; };
+		4FF99A911D4728FD0014805A /* RiverRecordingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A901D4728FD0014805A /* RiverRecordingTests.swift */; };
+		4FF99A9C1D4728FD0014805A /* RiverRecordingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A9B1D4728FD0014805A /* RiverRecordingUITests.swift */; };
+		4FF99AAB1D472B460014805A /* redRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99AAA1D472B460014805A /* redRectangle.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FF99A8D1D4728FD0014805A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF99A701D4728FD0014805A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF99A771D4728FD0014805A;
+			remoteInfo = RiverRecording;
+		};
+		4FF99A981D4728FD0014805A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF99A701D4728FD0014805A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF99A771D4728FD0014805A;
+			remoteInfo = RiverRecording;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4FF99A781D4728FD0014805A /* RiverRecording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverRecording.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF99A7B1D4728FD0014805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4FF99A7D1D4728FD0014805A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FF99A801D4728FD0014805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4FF99A821D4728FD0014805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FF99A851D4728FD0014805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4FF99A871D4728FD0014805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF99A8C1D4728FD0014805A /* RiverRecordingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverRecordingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF99A901D4728FD0014805A /* RiverRecordingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverRecordingTests.swift; sourceTree = "<group>"; };
+		4FF99A921D4728FD0014805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF99A971D4728FD0014805A /* RiverRecordingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverRecordingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF99A9B1D4728FD0014805A /* RiverRecordingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverRecordingUITests.swift; sourceTree = "<group>"; };
+		4FF99A9D1D4728FD0014805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF99AAA1D472B460014805A /* redRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redRectangle.png; path = Resources/redRectangle.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FF99A751D4728FD0014805A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A891D4728FD0014805A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A941D4728FD0014805A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FF99A6F1D4728FD0014805A = {
+			isa = PBXGroup;
+			children = (
+				4FF99A7A1D4728FD0014805A /* RiverRecording */,
+				4FF99A8F1D4728FD0014805A /* RiverRecordingTests */,
+				4FF99A9A1D4728FD0014805A /* RiverRecordingUITests */,
+				4FF99A791D4728FD0014805A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FF99A791D4728FD0014805A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99A781D4728FD0014805A /* RiverRecording.app */,
+				4FF99A8C1D4728FD0014805A /* RiverRecordingTests.xctest */,
+				4FF99A971D4728FD0014805A /* RiverRecordingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FF99A7A1D4728FD0014805A /* RiverRecording */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99AA91D472B350014805A /* Resources */,
+				4FF99A7B1D4728FD0014805A /* AppDelegate.swift */,
+				4FF99A7D1D4728FD0014805A /* ViewController.swift */,
+				4FF99A7F1D4728FD0014805A /* Main.storyboard */,
+				4FF99A821D4728FD0014805A /* Assets.xcassets */,
+				4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */,
+				4FF99A871D4728FD0014805A /* Info.plist */,
+			);
+			path = RiverRecording;
+			sourceTree = "<group>";
+		};
+		4FF99A8F1D4728FD0014805A /* RiverRecordingTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99A901D4728FD0014805A /* RiverRecordingTests.swift */,
+				4FF99A921D4728FD0014805A /* Info.plist */,
+			);
+			path = RiverRecordingTests;
+			sourceTree = "<group>";
+		};
+		4FF99A9A1D4728FD0014805A /* RiverRecordingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99A9B1D4728FD0014805A /* RiverRecordingUITests.swift */,
+				4FF99A9D1D4728FD0014805A /* Info.plist */,
+			);
+			path = RiverRecordingUITests;
+			sourceTree = "<group>";
+		};
+		4FF99AA91D472B350014805A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99AAA1D472B460014805A /* redRectangle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FF99A771D4728FD0014805A /* RiverRecording */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF99AA01D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecording" */;
+			buildPhases = (
+				4FF99A741D4728FD0014805A /* Sources */,
+				4FF99A751D4728FD0014805A /* Frameworks */,
+				4FF99A761D4728FD0014805A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RiverRecording;
+			productName = RiverRecording;
+			productReference = 4FF99A781D4728FD0014805A /* RiverRecording.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FF99A8B1D4728FD0014805A /* RiverRecordingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF99AA31D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingTests" */;
+			buildPhases = (
+				4FF99A881D4728FD0014805A /* Sources */,
+				4FF99A891D4728FD0014805A /* Frameworks */,
+				4FF99A8A1D4728FD0014805A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF99A8E1D4728FD0014805A /* PBXTargetDependency */,
+			);
+			name = RiverRecordingTests;
+			productName = RiverRecordingTests;
+			productReference = 4FF99A8C1D4728FD0014805A /* RiverRecordingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4FF99A961D4728FD0014805A /* RiverRecordingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF99AA61D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingUITests" */;
+			buildPhases = (
+				4FF99A931D4728FD0014805A /* Sources */,
+				4FF99A941D4728FD0014805A /* Frameworks */,
+				4FF99A951D4728FD0014805A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF99A991D4728FD0014805A /* PBXTargetDependency */,
+			);
+			name = RiverRecordingUITests;
+			productName = RiverRecordingUITests;
+			productReference = 4FF99A971D4728FD0014805A /* RiverRecordingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FF99A701D4728FD0014805A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Marquez Kim";
+				TargetAttributes = {
+					4FF99A771D4728FD0014805A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					4FF99A8B1D4728FD0014805A = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4FF99A771D4728FD0014805A;
+					};
+					4FF99A961D4728FD0014805A = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4FF99A771D4728FD0014805A;
+					};
+				};
+			};
+			buildConfigurationList = 4FF99A731D4728FD0014805A /* Build configuration list for PBXProject "RiverRecording" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4FF99A6F1D4728FD0014805A;
+			productRefGroup = 4FF99A791D4728FD0014805A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FF99A771D4728FD0014805A /* RiverRecording */,
+				4FF99A8B1D4728FD0014805A /* RiverRecordingTests */,
+				4FF99A961D4728FD0014805A /* RiverRecordingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FF99A761D4728FD0014805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A861D4728FD0014805A /* LaunchScreen.storyboard in Resources */,
+				4FF99A831D4728FD0014805A /* Assets.xcassets in Resources */,
+				4FF99A811D4728FD0014805A /* Main.storyboard in Resources */,
+				4FF99AAB1D472B460014805A /* redRectangle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A8A1D4728FD0014805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A951D4728FD0014805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FF99A741D4728FD0014805A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A7E1D4728FD0014805A /* ViewController.swift in Sources */,
+				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A881D4728FD0014805A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A911D4728FD0014805A /* RiverRecordingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A931D4728FD0014805A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A9C1D4728FD0014805A /* RiverRecordingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FF99A8E1D4728FD0014805A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FF99A771D4728FD0014805A /* RiverRecording */;
+			targetProxy = 4FF99A8D1D4728FD0014805A /* PBXContainerItemProxy */;
+		};
+		4FF99A991D4728FD0014805A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FF99A771D4728FD0014805A /* RiverRecording */;
+			targetProxy = 4FF99A981D4728FD0014805A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4FF99A7F1D4728FD0014805A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF99A801D4728FD0014805A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF99A851D4728FD0014805A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FF99A9E1D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4FF99A9F1D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FF99AA11D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RiverRecording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4FF99AA21D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RiverRecording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4FF99AA41D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RiverRecordingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverRecording.app/RiverRecording";
+			};
+			name = Debug;
+		};
+		4FF99AA51D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RiverRecordingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverRecording.app/RiverRecording";
+			};
+			name = Release;
+		};
+		4FF99AA71D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RiverRecordingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RiverRecording;
+			};
+			name = Debug;
+		};
+		4FF99AA81D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RiverRecordingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RiverRecording;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FF99A731D4728FD0014805A /* Build configuration list for PBXProject "RiverRecording" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99A9E1D4728FD0014805A /* Debug */,
+				4FF99A9F1D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF99AA01D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecording" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99AA11D4728FD0014805A /* Debug */,
+				4FF99AA21D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4FF99AA31D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99AA41D4728FD0014805A /* Debug */,
+				4FF99AA51D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4FF99AA61D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99AA71D4728FD0014805A /* Debug */,
+				4FF99AA81D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FF99A701D4728FD0014805A /* Project object */;
+}
