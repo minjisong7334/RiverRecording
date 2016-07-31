@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ODy-ji-yWf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oBn-1u-2Q1">
+            <objects>
+                <navigationController id="ODy-ji-yWf" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="25p-9V-oKw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="G2u-0g-O0R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIV-rY-eHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="-243"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RiverRecording" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrW-OF-QQq">
+                                <rect key="frame" x="130" y="254" width="60" height="60"/>
+                                <color key="tintColor" red="1" green="0.26455293530000001" blue="0.098595974409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="redRectangle.png"/>
+                                <connections>
+                                    <action selector="pressRecButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAm-iR-Sez"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o3-mE-drp">
+                                <rect key="frame" x="266" y="547" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qg-wU-GSP">
+                                <rect key="frame" x="149" y="342" width="22" height="22"/>
+                                <connections>
+                                    <action selector="pressPhotoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xE3-Sm-yC2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-Cr-aRT">
+                                <rect key="frame" x="16" y="64" width="288" height="170"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rrW-OF-QQq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4c5-BR-IbT"/>
+                            <constraint firstItem="NGf-Cr-aRT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5tl-AL-Xiy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6o3-mE-drp" secondAttribute="bottom" id="Ilm-L2-xHB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6o3-mE-drp" secondAttribute="trailing" id="NTp-FY-h9P"/>
+                            <constraint firstItem="6qg-wU-GSP" firstAttribute="centerX" secondItem="rrW-OF-QQq" secondAttribute="centerX" id="OTA-BB-Goq"/>
+                            <constraint firstItem="rrW-OF-QQq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Oqu-Go-ofa"/>
+                            <constraint firstItem="6qg-wU-GSP" firstAttribute="bottom" secondItem="rrW-OF-QQq" secondAttribute="bottom" constant="50" id="TIb-eR-BN8"/>
+                            <constraint firstItem="6qg-wU-GSP" firstAttribute="trailing" secondItem="rrW-OF-QQq" secondAttribute="trailing" id="Yin-EL-aDG"/>
+                            <constraint firstItem="NGf-Cr-aRT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gLl-CX-UxW"/>
+                            <constraint firstItem="rrW-OF-QQq" firstAttribute="top" secondItem="NGf-Cr-aRT" secondAttribute="bottom" constant="20" id="mzF-iG-KPl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NGf-Cr-aRT" secondAttribute="trailing" id="sAK-HZ-9fR"/>
+                            <constraint firstItem="6o3-mE-drp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wM2-0i-uj9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Yin-EL-aDG"/>
+                                <exclude reference="wM2-0i-uj9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fqa-tF-PDn"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="photoBtn" destination="6qg-wU-GSP" id="I8s-Rx-j59"/>
+                        <outlet property="photoImg" destination="NGf-Cr-aRT" id="1u9-ti-OOj"/>
+                        <outlet property="recBtn" destination="rrW-OF-QQq" id="N7Z-j5-p0O"/>
+                        <outlet property="statusLabel" destination="6o3-mE-drp" id="tmw-nz-WzK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="-243"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="redRectangle.png" width="60" height="60"/>
+    </resources>
+</document>

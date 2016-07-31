@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */; };
+		4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A7B1D4728FD0014805A /* AppDelegate.swift */; };
+		4FF99A7E1D4728FD0014805A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A7D1D4728FD0014805A /* ViewController.swift */; };
+		4FF99A811D4728FD0014805A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A7F1D4728FD0014805A /* Main.storyboard */; };
+		4FF99A831D4728FD0014805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A821D4728FD0014805A /* Assets.xcassets */; };
+		4FF99A861D4728FD0014805A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */; };
+		4FF99A911D4728FD0014805A /* RiverRecordingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A901D4728FD0014805A /* RiverRecordingTests.swift */; };
+		4FF99A9C1D4728FD0014805A /* RiverRecordingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A9B1D4728FD0014805A /* RiverRecordingUITests.swift */; };
+		4FF99AAB1D472B460014805A /* redRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99AAA1D472B460014805A /* redRectangle.png */; };
+		B23BB125B9448544AFB590DF /* Pods_RiverRecordingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892D6B3CA7F9C68C6B8698F7 /* Pods_RiverRecordingUITests.framework */; };
+		CD8C2D66235B88D60141A0CD /* Pods_RiverRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2651AC2BF85CC452AFD7AB /* Pods_RiverRecording.framework */; };
+		F56D48326F919050FAD7FB5C /* Pods_RiverRecordingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335C5090A636DFEE68F67995 /* Pods_RiverRecordingTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FF99A8D1D4728FD0014805A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF99A701D4728FD0014805A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF99A771D4728FD0014805A;
+			remoteInfo = RiverRecording;
+		};
+		4FF99A981D4728FD0014805A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF99A701D4728FD0014805A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF99A771D4728FD0014805A;
+			remoteInfo = RiverRecording;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		184ECDF70F2508E194804E10 /* Pods-RiverRecordingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests.release.xcconfig"; sourceTree = "<group>"; };
+		335C5090A636DFEE68F67995 /* Pods_RiverRecordingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecordingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4564895503FE332A58C509AF /* Pods-RiverRecording.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecording.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording.release.xcconfig"; sourceTree = "<group>"; };
+		4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FF99A781D4728FD0014805A /* RiverRecording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverRecording.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF99A7B1D4728FD0014805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4FF99A7D1D4728FD0014805A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FF99A801D4728FD0014805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4FF99A821D4728FD0014805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FF99A851D4728FD0014805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4FF99A871D4728FD0014805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF99A8C1D4728FD0014805A /* RiverRecordingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverRecordingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF99A901D4728FD0014805A /* RiverRecordingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverRecordingTests.swift; sourceTree = "<group>"; };
+		4FF99A921D4728FD0014805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF99A971D4728FD0014805A /* RiverRecordingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverRecordingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF99A9B1D4728FD0014805A /* RiverRecordingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverRecordingUITests.swift; sourceTree = "<group>"; };
+		4FF99A9D1D4728FD0014805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF99AAA1D472B460014805A /* redRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redRectangle.png; path = Resources/redRectangle.png; sourceTree = "<group>"; };
+		7CB16932BE93BAAC9826BCC0 /* Pods-RiverRecordingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		892D6B3CA7F9C68C6B8698F7 /* Pods_RiverRecordingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecordingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8911FBC149283BF4569DFE /* Pods-RiverRecording.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecording.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording.debug.xcconfig"; sourceTree = "<group>"; };
+		EDBBB87EB3B9E826D4E2F19E /* Pods-RiverRecordingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingUITests/Pods-RiverRecordingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EE2651AC2BF85CC452AFD7AB /* Pods_RiverRecording.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecording.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3A7393A73F8C8FCDFC768F /* Pods-RiverRecordingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingUITests/Pods-RiverRecordingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FF99A751D4728FD0014805A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8C2D66235B88D60141A0CD /* Pods_RiverRecording.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A891D4728FD0014805A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F56D48326F919050FAD7FB5C /* Pods_RiverRecordingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A941D4728FD0014805A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B23BB125B9448544AFB590DF /* Pods_RiverRecordingUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02B1134BA5D60A2DDF27ED20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E8911FBC149283BF4569DFE /* Pods-RiverRecording.debug.xcconfig */,
+				4564895503FE332A58C509AF /* Pods-RiverRecording.release.xcconfig */,
+				7CB16932BE93BAAC9826BCC0 /* Pods-RiverRecordingTests.debug.xcconfig */,
+				184ECDF70F2508E194804E10 /* Pods-RiverRecordingTests.release.xcconfig */,
+				FB3A7393A73F8C8FCDFC768F /* Pods-RiverRecordingUITests.debug.xcconfig */,
+				EDBBB87EB3B9E826D4E2F19E /* Pods-RiverRecordingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2A21FD3EB4A912102A0F96DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE2651AC2BF85CC452AFD7AB /* Pods_RiverRecording.framework */,
+				335C5090A636DFEE68F67995 /* Pods_RiverRecordingTests.framework */,
+				892D6B3CA7F9C68C6B8698F7 /* Pods_RiverRecordingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FF99A6F1D4728FD0014805A = {
+			isa = PBXGroup;
+			children = (
+				4FF99A7A1D4728FD0014805A /* RiverRecording */,
+				4FF99A8F1D4728FD0014805A /* RiverRecordingTests */,
+				4FF99A9A1D4728FD0014805A /* RiverRecordingUITests */,
+				4FF99A791D4728FD0014805A /* Products */,
+				02B1134BA5D60A2DDF27ED20 /* Pods */,
+				2A21FD3EB4A912102A0F96DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4FF99A791D4728FD0014805A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99A781D4728FD0014805A /* RiverRecording.app */,
+				4FF99A8C1D4728FD0014805A /* RiverRecordingTests.xctest */,
+				4FF99A971D4728FD0014805A /* RiverRecordingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FF99A7A1D4728FD0014805A /* RiverRecording */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99AA91D472B350014805A /* Resources */,
+				4FF99A7B1D4728FD0014805A /* AppDelegate.swift */,
+				4FF99A7D1D4728FD0014805A /* ViewController.swift */,
+				4FF99A7F1D4728FD0014805A /* Main.storyboard */,
+				4FF99A821D4728FD0014805A /* Assets.xcassets */,
+				4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */,
+				4FF99A871D4728FD0014805A /* Info.plist */,
+				4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */,
+			);
+			path = RiverRecording;
+			sourceTree = "<group>";
+		};
+		4FF99A8F1D4728FD0014805A /* RiverRecordingTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99A901D4728FD0014805A /* RiverRecordingTests.swift */,
+				4FF99A921D4728FD0014805A /* Info.plist */,
+			);
+			path = RiverRecordingTests;
+			sourceTree = "<group>";
+		};
+		4FF99A9A1D4728FD0014805A /* RiverRecordingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99A9B1D4728FD0014805A /* RiverRecordingUITests.swift */,
+				4FF99A9D1D4728FD0014805A /* Info.plist */,
+			);
+			path = RiverRecordingUITests;
+			sourceTree = "<group>";
+		};
+		4FF99AA91D472B350014805A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FF99AAA1D472B460014805A /* redRectangle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FF99A771D4728FD0014805A /* RiverRecording */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF99AA01D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecording" */;
+			buildPhases = (
+				F25E5066DA4693A5591FD746 /* [CP] Check Pods Manifest.lock */,
+				4FF99A741D4728FD0014805A /* Sources */,
+				4FF99A751D4728FD0014805A /* Frameworks */,
+				4FF99A761D4728FD0014805A /* Resources */,
+				8C05729F12542ACC2F690FAD /* [CP] Embed Pods Frameworks */,
+				4528B5F011389C394FABB468 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RiverRecording;
+			productName = RiverRecording;
+			productReference = 4FF99A781D4728FD0014805A /* RiverRecording.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FF99A8B1D4728FD0014805A /* RiverRecordingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF99AA31D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingTests" */;
+			buildPhases = (
+				F02800F9F8AA7AF5FFE610C6 /* [CP] Check Pods Manifest.lock */,
+				4FF99A881D4728FD0014805A /* Sources */,
+				4FF99A891D4728FD0014805A /* Frameworks */,
+				4FF99A8A1D4728FD0014805A /* Resources */,
+				AE0090545BE8871E94B05F47 /* [CP] Embed Pods Frameworks */,
+				B84E86C8F39F54AC8F704870 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF99A8E1D4728FD0014805A /* PBXTargetDependency */,
+			);
+			name = RiverRecordingTests;
+			productName = RiverRecordingTests;
+			productReference = 4FF99A8C1D4728FD0014805A /* RiverRecordingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4FF99A961D4728FD0014805A /* RiverRecordingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF99AA61D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingUITests" */;
+			buildPhases = (
+				05D749FAB5012F8C9596A9FF /* [CP] Check Pods Manifest.lock */,
+				4FF99A931D4728FD0014805A /* Sources */,
+				4FF99A941D4728FD0014805A /* Frameworks */,
+				4FF99A951D4728FD0014805A /* Resources */,
+				6C237EA7F81823418DCE11C3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF99A991D4728FD0014805A /* PBXTargetDependency */,
+			);
+			name = RiverRecordingUITests;
+			productName = RiverRecordingUITests;
+			productReference = 4FF99A971D4728FD0014805A /* RiverRecordingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FF99A701D4728FD0014805A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Marquez Kim";
+				TargetAttributes = {
+					4FF99A771D4728FD0014805A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					4FF99A8B1D4728FD0014805A = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4FF99A771D4728FD0014805A;
+					};
+					4FF99A961D4728FD0014805A = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4FF99A771D4728FD0014805A;
+					};
+				};
+			};
+			buildConfigurationList = 4FF99A731D4728FD0014805A /* Build configuration list for PBXProject "RiverRecording" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4FF99A6F1D4728FD0014805A;
+			productRefGroup = 4FF99A791D4728FD0014805A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FF99A771D4728FD0014805A /* RiverRecording */,
+				4FF99A8B1D4728FD0014805A /* RiverRecordingTests */,
+				4FF99A961D4728FD0014805A /* RiverRecordingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FF99A761D4728FD0014805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A861D4728FD0014805A /* LaunchScreen.storyboard in Resources */,
+				4FF99A831D4728FD0014805A /* Assets.xcassets in Resources */,
+				4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */,
+				4FF99A811D4728FD0014805A /* Main.storyboard in Resources */,
+				4FF99AAB1D472B460014805A /* redRectangle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A8A1D4728FD0014805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A951D4728FD0014805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D749FAB5012F8C9596A9FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4528B5F011389C394FABB468 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C237EA7F81823418DCE11C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecordingUITests/Pods-RiverRecordingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C05729F12542ACC2F690FAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE0090545BE8871E94B05F47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B84E86C8F39F54AC8F704870 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F02800F9F8AA7AF5FFE610C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F25E5066DA4693A5591FD746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FF99A741D4728FD0014805A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A7E1D4728FD0014805A /* ViewController.swift in Sources */,
+				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A881D4728FD0014805A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A911D4728FD0014805A /* RiverRecordingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF99A931D4728FD0014805A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF99A9C1D4728FD0014805A /* RiverRecordingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FF99A8E1D4728FD0014805A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FF99A771D4728FD0014805A /* RiverRecording */;
+			targetProxy = 4FF99A8D1D4728FD0014805A /* PBXContainerItemProxy */;
+		};
+		4FF99A991D4728FD0014805A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FF99A771D4728FD0014805A /* RiverRecording */;
+			targetProxy = 4FF99A981D4728FD0014805A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4FF99A7F1D4728FD0014805A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF99A801D4728FD0014805A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF99A851D4728FD0014805A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FF99A9E1D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4FF99A9F1D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FF99AA11D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E8911FBC149283BF4569DFE /* Pods-RiverRecording.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RiverRecording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4FF99AA21D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4564895503FE332A58C509AF /* Pods-RiverRecording.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RiverRecording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4FF99AA41D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CB16932BE93BAAC9826BCC0 /* Pods-RiverRecordingTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RiverRecordingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverRecording.app/RiverRecording";
+			};
+			name = Debug;
+		};
+		4FF99AA51D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 184ECDF70F2508E194804E10 /* Pods-RiverRecordingTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RiverRecordingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverRecording.app/RiverRecording";
+			};
+			name = Release;
+		};
+		4FF99AA71D4728FD0014805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3A7393A73F8C8FCDFC768F /* Pods-RiverRecordingUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = RiverRecordingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RiverRecording;
+			};
+			name = Debug;
+		};
+		4FF99AA81D4728FD0014805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBBB87EB3B9E826D4E2F19E /* Pods-RiverRecordingUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = RiverRecordingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RiverRecording;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FF99A731D4728FD0014805A /* Build configuration list for PBXProject "RiverRecording" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99A9E1D4728FD0014805A /* Debug */,
+				4FF99A9F1D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF99AA01D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecording" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99AA11D4728FD0014805A /* Debug */,
+				4FF99AA21D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF99AA31D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99AA41D4728FD0014805A /* Debug */,
+				4FF99AA51D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF99AA61D4728FD0014805A /* Build configuration list for PBXNativeTarget "RiverRecordingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF99AA71D4728FD0014805A /* Debug */,
+				4FF99AA81D4728FD0014805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FF99A701D4728FD0014805A /* Project object */;
+}
