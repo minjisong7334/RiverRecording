@@ -1,0 +1,6 @@
+framework module Pods_RiverRecordingUITests {
+  umbrella header "Pods-RiverRecordingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

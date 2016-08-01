@@ -1,0 +1,6 @@
+framework module Pods_RiverRecording {
+  umbrella header "Pods-RiverRecording-umbrella.h"
+
+  export *
+  module * { export * }
+}
