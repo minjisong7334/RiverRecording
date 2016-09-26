@@ -11,11 +11,13 @@ target 'RiverRecording' do
   target 'RiverRecordingTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase'
   end
 
   target 'RiverRecordingUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase'
   end
 
 end

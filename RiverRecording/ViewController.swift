@@ -28,9 +28,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var imagePicker:UIImagePickerController!
     
-    var meterTimer:NSTimer!
+    var meterTimer:Timer!
     
-    var soundFileURL:NSURL!
+    var soundFileURL:URL!
     
     var isRecording:Bool!
     
@@ -61,23 +61,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func initRecBtnImage() {
         recBtn.imageView!.layer.cornerRadius = recBtn.imageView!.frame.height/2
-        recBtn.setImage(recBtn.imageView!.image, forState:UIControlState.Normal)
+        recBtn.setImage(recBtn.imageView!.image, for:UIControlState())
     }
     
     func changeRecBtnImage() {
         if (isRecording == true) {
             recBtn.imageView!.layer.cornerRadius = 0
-            recBtn.setImage(recBtn.imageView!.image, forState:UIControlState.Normal)
+            recBtn.setImage(recBtn.imageView!.image, for:UIControlState())
         } else {
             recBtn.imageView!.layer.cornerRadius = recBtn.imageView!.frame.height/2
-            recBtn.setImage(recBtn.imageView!.image, forState:UIControlState.Normal)
+            recBtn.setImage(recBtn.imageView!.image, for:UIControlState())
         }
         
     }
     
 // MARK: Record
     
-    @IBAction func pressRecButton(sender: UIButton) {
+    @IBAction func pressRecButton(_ sender: UIButton) {
         NSLog("rec btn pressed")
         // UI change
         isRecording = !isRecording
@@ -93,7 +93,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func record() {
         // AV
         // check player
-        if player != nil && player.playing {
+        if player != nil && player.isPlaying {
             player.stop()
         } else {
             // do nothing
@@ -105,7 +105,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             recordWithPermission(true)
             return
         } else {
-            if recorder.recording {
+            if recorder.isRecording {
                 NSLog("pausing")
                 recorder.pause()
             } else {
@@ -115,10 +115,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    func recordWithPermission(setup:Bool) {
+    func recordWithPermission(_ setup:Bool) {
         let session:AVAudioSession = AVAudioSession.sharedInstance()
         // ios 8 and later
-        if (session.respondsToSelector("requestRecordPermission:")) {
+        if (session.responds(to: #selector(AVAudioSession.requestRecordPermission(_:)))) {
             AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
                 if granted {
                     print("Permission to record granted")
@@ -127,9 +127,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         self.setupRecorder()
                     }
                     self.recorder.record()
-                    self.meterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1,
+                    self.meterTimer = Timer.scheduledTimer(timeInterval: 0.1,
                         target:self,
-                        selector:"updateAudioMeter:",
+                        selector:#selector(ViewController.updateAudioMeter(_:)),
                         userInfo:nil,
                         repeats:true)
                 } else {
@@ -142,31 +142,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func setupRecorder() {
-        let format = NSDateFormatter()
+        let format = DateFormatter()
         format.dateFormat="yyyy-MM-dd-HH-mm-ss"
-        let currentFileName = "recording-\(format.stringFromDate(NSDate())).m4a"
+        let currentFileName = "recording-\(format.string(from: Date())).m4a"
         print(currentFileName)
         
-        let documentsDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        self.soundFileURL = documentsDirectory.URLByAppendingPathComponent(currentFileName)
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        self.soundFileURL = documentsDirectory.appendingPathComponent(currentFileName)
         
-        if NSFileManager.defaultManager().fileExistsAtPath(soundFileURL.absoluteString) {
+        if FileManager.default.fileExists(atPath: soundFileURL.absoluteString) {
             // probably won't happen. want to do something about it?
             print("soundfile \(soundFileURL.absoluteString) exists")
         }
         
         let recordSettings:[String : AnyObject] = [
-            AVFormatIDKey: NSNumber(unsignedInt:kAudioFormatAppleLossless),
-            AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
-            AVEncoderBitRateKey : 320000,
-            AVNumberOfChannelsKey: 2,
-            AVSampleRateKey : 44100.0
+            AVFormatIDKey: NSNumber(value: kAudioFormatAppleLossless as UInt32),
+            AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue as AnyObject,
+            AVEncoderBitRateKey : 320000 as AnyObject,
+            AVNumberOfChannelsKey: 2 as AnyObject,
+            AVSampleRateKey : 44100.0 as AnyObject
         ]
         
         do {
-            recorder = try AVAudioRecorder(URL: soundFileURL, settings: recordSettings)
+            recorder = try AVAudioRecorder(url: soundFileURL, settings: recordSettings)
             recorder.delegate = self
-            recorder.meteringEnabled = true
+            recorder.isMeteringEnabled = true
             recorder.prepareToRecord() // creates/overwrites the file at soundFileURL
         } catch let error as NSError {
             recorder = nil
@@ -230,58 +230,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func askForNotifications() {
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector:"background:",
-                                                         name:UIApplicationWillResignActiveNotification,
+        NotificationCenter.default.addObserver(self,
+                                                         selector:#selector(ViewController.background(_:)),
+                                                         name:NSNotification.Name.UIApplicationWillResignActive,
                                                          object:nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector:"foreground:",
-                                                         name:UIApplicationWillEnterForegroundNotification,
+        NotificationCenter.default.addObserver(self,
+                                                         selector:#selector(ViewController.foreground(_:)),
+                                                         name:NSNotification.Name.UIApplicationWillEnterForeground,
                                                          object:nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector:"routeChange:",
-                                                         name:AVAudioSessionRouteChangeNotification,
+        NotificationCenter.default.addObserver(self,
+                                                         selector:#selector(ViewController.routeChange(_:)),
+                                                         name:NSNotification.Name.AVAudioSessionRouteChange,
                                                          object:nil)
     }
     
-    func background(notification:NSNotification) {
+    func background(_ notification:Notification) {
         print("background")
     }
     
-    func foreground(notification:NSNotification) {
+    func foreground(_ notification:Notification) {
         print("foreground")
     }
     
     
-    func routeChange(notification:NSNotification) {
-        print("routeChange \(notification.userInfo)")
+    func routeChange(_ notification:Notification) {
+        print("routeChange \((notification as NSNotification).userInfo)")
         
-        if let userInfo = notification.userInfo {
+        if let userInfo = (notification as NSNotification).userInfo {
             //print("userInfo \(userInfo)")
             if let reason = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt {
                 //print("reason \(reason)")
                 switch AVAudioSessionRouteChangeReason(rawValue: reason)! {
-                case AVAudioSessionRouteChangeReason.NewDeviceAvailable:
+                case AVAudioSessionRouteChangeReason.newDeviceAvailable:
                     print("NewDeviceAvailable")
                     print("did you plug in headphones?")
                     checkHeadphones()
-                case AVAudioSessionRouteChangeReason.OldDeviceUnavailable:
+                case AVAudioSessionRouteChangeReason.oldDeviceUnavailable:
                     print("OldDeviceUnavailable")
                     print("did you unplug headphones?")
                     checkHeadphones()
-                case AVAudioSessionRouteChangeReason.CategoryChange:
+                case AVAudioSessionRouteChangeReason.categoryChange:
                     print("CategoryChange")
-                case AVAudioSessionRouteChangeReason.Override:
+                case AVAudioSessionRouteChangeReason.override:
                     print("Override")
-                case AVAudioSessionRouteChangeReason.WakeFromSleep:
+                case AVAudioSessionRouteChangeReason.wakeFromSleep:
                     print("WakeFromSleep")
-                case AVAudioSessionRouteChangeReason.Unknown:
+                case AVAudioSessionRouteChangeReason.unknown:
                     print("Unknown")
-                case AVAudioSessionRouteChangeReason.NoSuitableRouteForCategory:
+                case AVAudioSessionRouteChangeReason.noSuitableRouteForCategory:
                     print("NoSuitableRouteForCategory")
-                case AVAudioSessionRouteChangeReason.RouteConfigurationChange:
+                case AVAudioSessionRouteChangeReason.routeConfigurationChange:
                     print("RouteConfigurationChange")
                     
                 }
@@ -309,37 +309,37 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
 // MARK: Photo
     
-    @IBAction func pressPhotoButton(sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+    @IBAction func pressPhotoButton(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
             imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         let tempImage:UIImage = image
         photoImg.image  = tempImage
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
 // MARK: AudioMeter
     
-    func updateAudioMeter(timer:NSTimer) {
+    func updateAudioMeter(_ timer:Timer) {
         
-        if recorder.recording {
+        if recorder.isRecording {
             let min = Int(recorder.currentTime / 60)
-            let sec = Int(recorder.currentTime % 60)
+            let sec = Int(recorder.currentTime.truncatingRemainder(dividingBy: 60))
             
             let s = String(format: "%02d:%02d", min, sec)
 
             recorder.updateMeters()
             // if you want to draw some graphics...
-            var apc0 = recorder.averagePowerForChannel(0)
-            var peak0 = recorder.peakPowerForChannel(0)
+            let apc0 = recorder.averagePower(forChannel: 0)
+            let peak0 = recorder.peakPower(forChannel: 0)
             
             statusLabel.text = apc0.description + " " + peak0.description + " " + s
         }
@@ -350,26 +350,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 // MARK: AVAudioRecorderDelegate
 extension ViewController : AVAudioRecorderDelegate {
     
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder,
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder,
                                          successfully flag: Bool) {
         print("finished recording \(flag)")
         
         // iOS8 and later
         let alert = UIAlertController(title: "Recorder",
                                       message: "Finished Recording",
-                                      preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Keep", style: .Default, handler: {action in
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Keep", style: .default, handler: {action in
             print("keep was tapped")
         }))
-        alert.addAction(UIAlertAction(title: "Delete", style: .Default, handler: {action in
+        alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: {action in
             print("delete was tapped")
             self.recorder.deleteRecording()
         }))
-        self.presentViewController(alert, animated:true, completion:nil)
+        self.present(alert, animated:true, completion:nil)
     }
     
-    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder,
-                                          error: NSError?) {
+    func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder,
+                                          error: Error?) {
         
         if let e = error {
             print("\(e.localizedDescription)")
@@ -380,11 +380,11 @@ extension ViewController : AVAudioRecorderDelegate {
 
 // MARK: AVAudioPlayerDelegate
 extension ViewController : AVAudioPlayerDelegate {
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("finished playing \(flag)")
     }
     
-    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
         if let e = error {
             print("\(e.localizedDescription)")
         }
