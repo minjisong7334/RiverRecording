@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ODy-ji-yWf">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fc6-nr-5RK">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="oBn-1u-2Q1">
             <objects>
                 <navigationController id="ODy-ji-yWf" sceneMemberID="viewController">
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="25p-9V-oKw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,34 +31,34 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrW-OF-QQq">
-                                <rect key="frame" x="254" y="130" width="60" height="60"/>
-                                <color key="tintColor" red="1" green="0.26455293530000001" blue="0.098595974409999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrW-OF-QQq">
+                                <frame key="frameInset" minX="254" minY="130" width="60" height="60"/>
+                                <color key="tintColor" red="1" green="0.26455293530000001" blue="0.098595974409999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="redRectangle.png"/>
                                 <connections>
                                     <action selector="pressRecButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAm-iR-Sez"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o3-mE-drp">
-                                <rect key="frame" x="510" y="299" width="38" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o3-mE-drp">
+                                <frame key="frameInset" minX="510" minY="299" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qg-wU-GSP">
-                                <rect key="frame" x="273" y="218" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qg-wU-GSP">
+                                <frame key="frameInset" minX="273" minY="218" width="22" height="22"/>
                                 <connections>
                                     <action selector="pressPhotoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xE3-Sm-yC2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-Cr-aRT">
-                                <rect key="frame" x="20" y="64" width="528" height="46"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-Cr-aRT">
+                                <frame key="frameInset" minX="20" minY="64" width="528" height="46"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rrW-OF-QQq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4c5-BR-IbT"/>
                             <constraint firstItem="NGf-Cr-aRT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5tl-AL-Xiy"/>
@@ -83,8 +81,6 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Fqa-tF-PDn"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="photoBtn" destination="6qg-wU-GSP" id="I8s-Rx-j59"/>
                         <outlet property="photoImg" destination="NGf-Cr-aRT" id="1u9-ti-OOj"/>
@@ -94,10 +90,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="-243"/>
+            <point key="canvasLocation" x="528" y="-354"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="TUH-h6-fU7">
+            <objects>
+                <viewController id="fc6-nr-5RK" customClass="DashboardViewController" customModule="RiverRecording" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0hh-c3-Zug"/>
+                        <viewControllerLayoutGuide type="bottom" id="vZ0-0C-dT2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wnd-q6-eg6">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dashboard.png" translatesAutoresizingMaskIntoConstraints="NO" id="YpH-du-drM">
+                                <frame key="frameInset" width="736" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEq-CS-KYf" customClass="KCFloatingActionButton" customModule="KCFloatingActionButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Aw2-DH-5D4"/>
+                                    <constraint firstAttribute="width" constant="54" id="H9l-hB-q1e"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoCloseOnTap" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="btn_dashboard_menu_normal.png"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FEq-CS-KYf" secondAttribute="trailing" constant="30" id="7TY-Ao-phV"/>
+                            <constraint firstItem="vZ0-0C-dT2" firstAttribute="top" secondItem="FEq-CS-KYf" secondAttribute="bottom" constant="30" id="mDl-UD-92h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fab" destination="FEq-CS-KYf" id="ZwD-8n-nCD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Xc-eW-tO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="374"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Dashboard.png" width="1136" height="640"/>
+        <image name="btn_dashboard_menu_normal.png" width="54" height="54"/>
         <image name="redRectangle.png" width="60" height="60"/>
     </resources>
 </document>
