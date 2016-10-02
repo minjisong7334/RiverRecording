@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>KCFloatingActionButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RiverRecording.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>59C5734CBDBC16DD52556632EF13C40B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7688C89587F46D35DC5F9EF5C1A909C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE6A9280F3412ECEEBC98EB94CC5B09A</key>
+		<key>B2F6C7018E305CF3111F4B9C95B7A5E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
