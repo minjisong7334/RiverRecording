@@ -12,16 +12,21 @@ import KCFloatingActionButton
 
 class DashboardViewController : UIViewController {
     
-    @IBOutlet weak var fab = KCFloatingActionButton()
-    
-    
     override func viewDidLoad() {
         //Record, Category, Edit, Search
-        fab?.addItem("Record", icon: UIImage(named: "btn_dash_menu_record")!)
-        fab?.addItem("Category", icon: UIImage(named: "btn_dash_menu_category")!)
-        fab?.addItem("Edit", icon: UIImage(named: "btn_dash_menu_edit")!)
-        fab?.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!)
-    }
+        let fab = KCFloatingActionButton()
+        
+        fab.buttonImage = UIImage(named: "btn_dashboard_menu_normal")
+        
+        fab.addItem("Record", icon: UIImage(named: "btn_dash_menu_record")!)
+        fab.addItem("Category", icon: UIImage(named: "btn_dash_menu_category")!)
+        fab.addItem("Edit", icon: UIImage(named: "btn_dash_menu_edit")!)
+        fab.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!)
+        
+        self.view.addSubview(fab)
+        
+        }
+    
     
     
 }
