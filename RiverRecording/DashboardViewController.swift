@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 import KCFloatingActionButton
 
+
 class DashboardViewController : UIViewController {
     
     override func viewDidLoad() {
         //Record, Category, Edit, Search
         let fab = KCFloatingActionButton()
          
-        fab.buttonImage = UIImage(named: "btn_dashboard_menu_normal")
+//        fab.buttonImage = UIImage(named: "btn_dashboard_menu_normal")
         
         fab.addItem("Record", icon: UIImage(named: "btn_dash_menu_record")!)
         fab.addItem("Category", icon: UIImage(named: "btn_dash_menu_category")!)
