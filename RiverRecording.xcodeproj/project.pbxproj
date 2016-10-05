@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A791DA524E400183705 /* DashboardViewController.swift */; };
 		4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A7A1DA524E400183705 /* RecordingViewController.swift */; };
+		4F449A781DA51A7B00183705 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A771DA51A7B00183705 /* HamburgerButton.swift */; };
 		4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */; };
 		4F83560B1DA09CEF00ED7696 /* btn_dash_menu_category.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356031DA09CEF00ED7696 /* btn_dash_menu_category.png */; };
 		4F83560C1DA09CEF00ED7696 /* btn_dash_menu_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356041DA09CEF00ED7696 /* btn_dash_menu_edit.png */; };
@@ -59,6 +60,7 @@
 		4C13DD2778C532147E7E3979 /* Pods_RiverRecordingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecordingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F449A791DA524E400183705 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Sources/DashboardViewController.swift; sourceTree = "<group>"; };
 		4F449A7A1DA524E400183705 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = Sources/RecordingViewController.swift; sourceTree = "<group>"; };
+		4F449A771DA51A7B00183705 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F8356031DA09CEF00ED7696 /* btn_dash_menu_category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_dash_menu_category.png; path = Resources/btn_dash_menu_category.png; sourceTree = "<group>"; };
 		4F8356041DA09CEF00ED7696 /* btn_dash_menu_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_dash_menu_edit.png; path = Resources/btn_dash_menu_edit.png; sourceTree = "<group>"; };
@@ -136,6 +138,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4F449A751DA51A4F00183705 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				4F449A761DA51A7B00183705 /* HamburgerButton */,
+			);
+			name = Plugin;
+			sourceTree = "<group>";
+		};
+		4F449A761DA51A7B00183705 /* HamburgerButton */ = {
+			isa = PBXGroup;
+			children = (
+				4F449A771DA51A7B00183705 /* HamburgerButton.swift */,
+			);
+			name = HamburgerButton;
+			path = Plugins/HamburgerButton;
+			sourceTree = "<group>";
+		};
 		4F8356251DA09D7100ED7696 /* btn */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +210,7 @@
 		4FF99A7A1D4728FD0014805A /* RiverRecording */ = {
 			isa = PBXGroup;
 			children = (
+				4F449A751DA51A4F00183705 /* Plugin */,
 				4FA20EE51DA09FF300EB92D0 /* Sources */,
 				4FF99AA91D472B350014805A /* Resources */,
 				4FF99A7B1D4728FD0014805A /* AppDelegate.swift */,
@@ -540,6 +560,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */,
+				4FF99A7E1D4728FD0014805A /* ViewController.swift in Sources */,
+				4F449A781DA51A7B00183705 /* HamburgerButton.swift in Sources */,
 				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
 				4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */,
 			);

@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RecordingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // UI part
     @IBOutlet var recBtn: UIButton!
@@ -129,7 +129,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.recorder.record()
                     self.meterTimer = Timer.scheduledTimer(timeInterval: 0.1,
                         target:self,
-                        selector:#selector(ViewController.updateAudioMeter(_:)),
+                        selector:#selector(RecordingViewController.updateAudioMeter(_:)),
                         userInfo:nil,
                         repeats:true)
                 } else {
@@ -231,17 +231,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func askForNotifications() {
         
         NotificationCenter.default.addObserver(self,
-                                                         selector:#selector(ViewController.background(_:)),
+                                                         selector:#selector(RecordingViewController.background(_:)),
                                                          name:NSNotification.Name.UIApplicationWillResignActive,
                                                          object:nil)
         
         NotificationCenter.default.addObserver(self,
-                                                         selector:#selector(ViewController.foreground(_:)),
+                                                         selector:#selector(RecordingViewController.foreground(_:)),
                                                          name:NSNotification.Name.UIApplicationWillEnterForeground,
                                                          object:nil)
         
         NotificationCenter.default.addObserver(self,
-                                                         selector:#selector(ViewController.routeChange(_:)),
+                                                         selector:#selector(RecordingViewController.routeChange(_:)),
                                                          name:NSNotification.Name.AVAudioSessionRouteChange,
                                                          object:nil)
     }
@@ -348,7 +348,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 
 // MARK: AVAudioRecorderDelegate
-extension ViewController : AVAudioRecorderDelegate {
+extension RecordingViewController : AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder,
                                          successfully flag: Bool) {
@@ -379,7 +379,7 @@ extension ViewController : AVAudioRecorderDelegate {
 }
 
 // MARK: AVAudioPlayerDelegate
-extension ViewController : AVAudioPlayerDelegate {
+extension RecordingViewController : AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("finished playing \(flag)")
     }
