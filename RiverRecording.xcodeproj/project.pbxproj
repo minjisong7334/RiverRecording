@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A791DA524E400183705 /* DashboardViewController.swift */; };
+		4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A7A1DA524E400183705 /* RecordingViewController.swift */; };
 		4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */; };
 		4F83560B1DA09CEF00ED7696 /* btn_dash_menu_category.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356031DA09CEF00ED7696 /* btn_dash_menu_category.png */; };
 		4F83560C1DA09CEF00ED7696 /* btn_dash_menu_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356041DA09CEF00ED7696 /* btn_dash_menu_edit.png */; };
@@ -22,9 +24,7 @@
 		4F8356201DA09CF700ED7696 /* btn_dashboard_menu_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356181DA09CF700ED7696 /* btn_dashboard_menu_selected.png */; };
 		4F8356211DA09CF700ED7696 /* dashboard_btn_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356191DA09CF700ED7696 /* dashboard_btn_add.png */; };
 		4F8356271DA09E3C00ED7696 /* Dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356261DA09E3C00ED7696 /* Dashboard.png */; };
-		4FA20EE71DA0A00200EB92D0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA20EE61DA0A00200EB92D0 /* DashboardViewController.swift */; };
 		4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A7B1D4728FD0014805A /* AppDelegate.swift */; };
-		4FF99A7E1D4728FD0014805A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A7D1D4728FD0014805A /* ViewController.swift */; };
 		4FF99A811D4728FD0014805A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A7F1D4728FD0014805A /* Main.storyboard */; };
 		4FF99A831D4728FD0014805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A821D4728FD0014805A /* Assets.xcassets */; };
 		4FF99A861D4728FD0014805A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */; };
@@ -57,6 +57,8 @@
 		39FA4DF08FB80EF069BFDC36 /* Pods-RiverRecordingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		46A44C7E4AE0F88384342DFD /* Pods-RiverRecordingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingUITests/Pods-RiverRecordingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C13DD2778C532147E7E3979 /* Pods_RiverRecordingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecordingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F449A791DA524E400183705 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Sources/DashboardViewController.swift; sourceTree = "<group>"; };
+		4F449A7A1DA524E400183705 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = Sources/RecordingViewController.swift; sourceTree = "<group>"; };
 		4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F8356031DA09CEF00ED7696 /* btn_dash_menu_category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_dash_menu_category.png; path = Resources/btn_dash_menu_category.png; sourceTree = "<group>"; };
 		4F8356041DA09CEF00ED7696 /* btn_dash_menu_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_dash_menu_edit.png; path = Resources/btn_dash_menu_edit.png; sourceTree = "<group>"; };
@@ -72,10 +74,8 @@
 		4F8356181DA09CF700ED7696 /* btn_dashboard_menu_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_dashboard_menu_selected.png; path = Resources/btn_dashboard_menu_selected.png; sourceTree = "<group>"; };
 		4F8356191DA09CF700ED7696 /* dashboard_btn_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dashboard_btn_add.png; path = Resources/dashboard_btn_add.png; sourceTree = "<group>"; };
 		4F8356261DA09E3C00ED7696 /* Dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dashboard.png; path = Resources/Dashboard.png; sourceTree = "<group>"; };
-		4FA20EE61DA0A00200EB92D0 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4FF99A781D4728FD0014805A /* RiverRecording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverRecording.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF99A7B1D4728FD0014805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FF99A7D1D4728FD0014805A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4FF99A801D4728FD0014805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FF99A821D4728FD0014805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FF99A851D4728FD0014805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,7 +160,8 @@
 		4FA20EE51DA09FF300EB92D0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4FA20EE61DA0A00200EB92D0 /* DashboardViewController.swift */,
+				4F449A791DA524E400183705 /* DashboardViewController.swift */,
+				4F449A7A1DA524E400183705 /* RecordingViewController.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -193,7 +194,6 @@
 				4FA20EE51DA09FF300EB92D0 /* Sources */,
 				4FF99AA91D472B350014805A /* Resources */,
 				4FF99A7B1D4728FD0014805A /* AppDelegate.swift */,
-				4FF99A7D1D4728FD0014805A /* ViewController.swift */,
 				4FF99A7F1D4728FD0014805A /* Main.storyboard */,
 				4FF99A821D4728FD0014805A /* Assets.xcassets */,
 				4FF99A841D4728FD0014805A /* LaunchScreen.storyboard */,
@@ -539,9 +539,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FF99A7E1D4728FD0014805A /* ViewController.swift in Sources */,
-				4FA20EE71DA0A00200EB92D0 /* DashboardViewController.swift in Sources */,
+				4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */,
 				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
+				4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIV-rY-eHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-174" y="-354"/>
+            <point key="canvasLocation" x="-163" y="-354"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -100,15 +100,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard.png" translatesAutoresizingMaskIntoConstraints="NO" id="YpH-du-drM"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IF7-HP-klf" customClass="KCFloatingActionButton" customModule="KCFloatingActionButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="v3m-aA-Oho"/>
+                                    <constraint firstAttribute="width" constant="54" id="y16-D2-Tx7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YpH-du-drM" firstAttribute="leading" secondItem="Wnd-q6-eg6" secondAttribute="leading" id="DYe-Th-5dh"/>
                             <constraint firstAttribute="trailing" secondItem="YpH-du-drM" secondAttribute="trailing" id="RU0-Eg-eqV"/>
                             <constraint firstItem="YpH-du-drM" firstAttribute="top" secondItem="Wnd-q6-eg6" secondAttribute="top" id="XLS-fV-tFX"/>
+                            <constraint firstItem="vZ0-0C-dT2" firstAttribute="top" secondItem="IF7-HP-klf" secondAttribute="bottom" id="fAE-kd-JXp"/>
+                            <constraint firstAttribute="trailing" secondItem="IF7-HP-klf" secondAttribute="trailing" id="hBe-vT-hpx"/>
                             <constraint firstAttribute="bottom" secondItem="YpH-du-drM" secondAttribute="bottom" id="vQe-Pg-bb3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fab" destination="IF7-HP-klf" id="ymU-Ki-mYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Xc-eW-tO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
