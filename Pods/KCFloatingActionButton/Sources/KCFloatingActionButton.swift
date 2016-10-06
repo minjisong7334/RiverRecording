@@ -21,7 +21,7 @@ public enum KCFABOpenAnimationType {
     KCFloatingActionButton support storyboard designable.
 */
 @IBDesignable
-open class KCFloatingActionButton: UIView {
+open class KCFloatingActionButton: UIView { 
     // MARK: - Properties
 
     /**
@@ -193,8 +193,9 @@ open class KCFloatingActionButton: UIView {
         backgroundColor = UIColor.clear
         setObserver()
     }
-
-    // Hamburger
+    /////////////////////////////  /
+    // Hamburger variable & constants
+    ////////////////////////////////////
     let shortStroke: CGPath = {
         let path = CGMutablePath()
         path.move(to: CGPoint(x:2, y:2))
@@ -226,6 +227,8 @@ open class KCFloatingActionButton: UIView {
     var top: CAShapeLayer! = CAShapeLayer()
     var bottom: CAShapeLayer! = CAShapeLayer()
     var middle: CAShapeLayer! = CAShapeLayer()
+    /////////////////////////////////
+    /////////////////////////////////
     
     /**
         Initialize with custom size.
@@ -592,7 +595,7 @@ open class KCFloatingActionButton: UIView {
         for layer in [ self.top, self.middle, self.bottom ] {
             layer?.fillColor = nil
             layer?.strokeColor = UIColor.white.cgColor
-            layer?.lineWidth = 4
+            layer?.lineWidth = 3
             layer?.miterLimit = 4
             layer?.lineCap = kCALineCapRound
             layer?.masksToBounds = true
