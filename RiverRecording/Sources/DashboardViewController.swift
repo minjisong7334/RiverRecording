@@ -35,8 +35,10 @@ class DashboardViewController : UIViewController {
         })
         fab.addItem("Category", icon: UIImage(named: "btn_dash_menu_category")!)
         fab.addItem("Edit", icon: UIImage(named: "btn_dash_menu_edit")!)
-        fab.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!)
-            
+		fab.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!, handler: {action in
+			self.moveToSearchView()
+		})
+		
         
         self.view.addSubview(fab)
     }
@@ -45,6 +47,11 @@ class DashboardViewController : UIViewController {
         let recordingViewController = storyboard?.instantiateViewController(withIdentifier: "RecordingViewController")
         self.navigationController?.pushViewController(recordingViewController!, animated: true)
     }
+	
+	func moveToSearchView() {
+		let recordingViewController = storyboard?.instantiateViewController(withIdentifier: "SearchViewController")
+		self.navigationController?.pushViewController(recordingViewController!, animated: true)
+	}
         
     
 }

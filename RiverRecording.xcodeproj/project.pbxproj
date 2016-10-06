@@ -33,6 +33,7 @@
 		4FF99A9C1D4728FD0014805A /* RiverRecordingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A9B1D4728FD0014805A /* RiverRecordingUITests.swift */; };
 		4FF99AAB1D472B460014805A /* redRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF99AAA1D472B460014805A /* redRectangle.png */; };
 		61C57D1CEAA1CBA8E451A4E8 /* Pods_RiverRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F984F11778531B470AB0BB72 /* Pods_RiverRecording.framework */; };
+		C0B79E851DA6994300B3446E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B79E841DA6994300B3446E /* SearchViewController.swift */; };
 		CE5BAA6A7E7E651DAE5D2F34 /* Pods_RiverRecordingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517E693B9FE3C2849BBFAFCF /* Pods_RiverRecordingTests.framework */; };
 		F615B1EB25160761E4B5CDB3 /* Pods_RiverRecordingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C13DD2778C532147E7E3979 /* Pods_RiverRecordingUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		517E693B9FE3C2849BBFAFCF /* Pods_RiverRecordingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecordingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65823143C0386C4E7F386F20 /* Pods-RiverRecordingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests.release.xcconfig"; sourceTree = "<group>"; };
 		68A4B4D4D2BCDB13681382AE /* Pods-RiverRecordingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingUITests/Pods-RiverRecordingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C0B79E841DA6994300B3446E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F86A21F1088207EA0DB50A3A /* Pods-RiverRecording.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecording.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording.release.xcconfig"; sourceTree = "<group>"; };
 		F984F11778531B470AB0BB72 /* Pods_RiverRecording.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecording.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB371678E26195D451DAC64A /* Pods-RiverRecording.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecording.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				4F449A791DA524E400183705 /* DashboardViewController.swift */,
 				4F449A7A1DA524E400183705 /* RecordingViewController.swift */,
+				C0B79E841DA6994300B3446E /* SearchViewController.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B79E851DA6994300B3446E /* SearchViewController.swift in Sources */,
 				4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */,
 				4F449A781DA51A7B00183705 /* HamburgerButton.swift in Sources */,
 				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
