@@ -27,7 +27,7 @@ class DashboardViewController : UIViewController {
         fab.addItem("Record", icon: UIImage(named: "btn_dash_menu_record")!, handler: {item in
             let alert = UIAlertController(title: "Recording", message: "Will you start to record?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { action in
-                self.moveToRecord()
+                self.moveToRecordingView()
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -36,13 +36,15 @@ class DashboardViewController : UIViewController {
         fab.addItem("Category", icon: UIImage(named: "btn_dash_menu_category")!)
         fab.addItem("Edit", icon: UIImage(named: "btn_dash_menu_edit")!)
         fab.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!)
+            
         
         self.view.addSubview(fab)
     }
     
-    func moveToRecord() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RecordingViewController") as UIViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+    func moveToRecordingView() {
+        let recordingViewController = storyboard?.instantiateViewController(withIdentifier: "RecordingViewController")
+        self.navigationController?.pushViewController(recordingViewController!, animated: true)
     }
+        
+    
 }
