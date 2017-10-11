@@ -11,12 +11,6 @@
 		4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A791DA524E400183705 /* DashboardViewController.swift */; };
 		4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A7A1DA524E400183705 /* RecordingViewController.swift */; };
 		4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */; };
-		4F83560B1DA09CEF00ED7696 /* btn_dash_menu_category.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356031DA09CEF00ED7696 /* btn_dash_menu_category.png */; };
-		4F83560C1DA09CEF00ED7696 /* btn_dash_menu_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356041DA09CEF00ED7696 /* btn_dash_menu_edit.png */; };
-		4F83560D1DA09CEF00ED7696 /* btn_dash_menu_record.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356051DA09CEF00ED7696 /* btn_dash_menu_record.png */; };
-		4F83560E1DA09CEF00ED7696 /* btn_dash_menu_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356061DA09CEF00ED7696 /* btn_dash_menu_search.png */; };
-		4F83560F1DA09CEF00ED7696 /* btn_dashboard_menu_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356071DA09CEF00ED7696 /* btn_dashboard_menu_normal.png */; };
-		4F8356101DA09CEF00ED7696 /* btn_dashboard_menu_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356081DA09CEF00ED7696 /* btn_dashboard_menu_selected.png */; };
 		4F83561B1DA09CF700ED7696 /* btn_dash_menu_category.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356131DA09CF700ED7696 /* btn_dash_menu_category.png */; };
 		4F83561C1DA09CF700ED7696 /* btn_dash_menu_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356141DA09CF700ED7696 /* btn_dash_menu_edit.png */; };
 		4F83561D1DA09CF700ED7696 /* btn_dash_menu_record.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8356151DA09CF700ED7696 /* btn_dash_menu_record.png */; };
@@ -332,23 +326,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Marquez Kim";
 				TargetAttributes = {
 					4FF99A771D4728FD0014805A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 69L7M78L4P;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					4FF99A8B1D4728FD0014805A = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = 4FF99A771D4728FD0014805A;
 					};
 					4FF99A961D4728FD0014805A = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = 4FF99A771D4728FD0014805A;
 					};
 				};
@@ -380,7 +374,6 @@
 			files = (
 				4F83561D1DA09CF700ED7696 /* btn_dash_menu_record.png in Resources */,
 				4F8356271DA09E3C00ED7696 /* Dashboard.png in Resources */,
-				4F83560D1DA09CEF00ED7696 /* btn_dash_menu_record.png in Resources */,
 				4FF99A861D4728FD0014805A /* LaunchScreen.storyboard in Resources */,
 				4FF99A831D4728FD0014805A /* Assets.xcassets in Resources */,
 				4F83561F1DA09CF700ED7696 /* btn_dashboard_menu_normal.png in Resources */,
@@ -388,15 +381,10 @@
 				4F8356201DA09CF700ED7696 /* btn_dashboard_menu_selected.png in Resources */,
 				4F83561B1DA09CF700ED7696 /* btn_dash_menu_category.png in Resources */,
 				4F83561C1DA09CF700ED7696 /* btn_dash_menu_edit.png in Resources */,
-				4F8356101DA09CEF00ED7696 /* btn_dashboard_menu_selected.png in Resources */,
 				4F83561E1DA09CF700ED7696 /* btn_dash_menu_search.png in Resources */,
-				4F83560E1DA09CEF00ED7696 /* btn_dash_menu_search.png in Resources */,
-				4F83560F1DA09CEF00ED7696 /* btn_dashboard_menu_normal.png in Resources */,
 				4F8356211DA09CF700ED7696 /* dashboard_btn_add.png in Resources */,
-				4F83560C1DA09CEF00ED7696 /* btn_dash_menu_edit.png in Resources */,
 				4FF99AAB1D472B460014805A /* redRectangle.png in Resources */,
 				4F96BA161DA6936B009A0E78 /* Main.storyboard in Resources */,
-				4F83560B1DA09CEF00ED7696 /* btn_dash_menu_category.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,13 +614,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -671,13 +667,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -696,6 +700,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -704,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB371678E26195D451DAC64A /* Pods-RiverRecording.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 69L7M78L4P;
@@ -712,7 +718,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -720,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F86A21F1088207EA0DB50A3A /* Pods-RiverRecording.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 69L7M78L4P;
@@ -728,7 +736,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -741,7 +750,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverRecording.app/RiverRecording";
 			};
 			name = Debug;
@@ -755,7 +765,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverRecording.app/RiverRecording";
 			};
 			name = Release;
@@ -768,7 +779,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = RiverRecording;
 			};
 			name = Debug;
@@ -781,7 +793,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecordingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = RiverRecording;
 			};
 			name = Release;
