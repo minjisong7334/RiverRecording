@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,16 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redRectangle.png" translatesAutoresizingMaskIntoConstraints="NO" id="rn7-NF-pjh"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="River recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41X-mk-p6Z">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0 ** 가로 화면에 최적화 되어 있습니다. **" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQH-IB-DYu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_river" translatesAutoresizingMaskIntoConstraints="NO" id="rn7-NF-pjh">
+                                <rect key="frame" x="127.5" y="273.5" width="120" height="120"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="River Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41X-mk-p6Z">
+                                <rect key="frame" x="127" y="403.5" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,12 +33,9 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="rn7-NF-pjh" firstAttribute="centerX" secondItem="41X-mk-p6Z" secondAttribute="centerX" id="1ch-Ct-DJC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rQH-IB-DYu" secondAttribute="trailing" id="EY8-yV-6A8"/>
                             <constraint firstItem="rn7-NF-pjh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PMS-89-dMP"/>
                             <constraint firstItem="rn7-NF-pjh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eu5-z9-Zfk"/>
-                            <constraint firstItem="rn7-NF-pjh" firstAttribute="bottom" secondItem="41X-mk-p6Z" secondAttribute="top" id="fv6-Qd-5D7"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rQH-IB-DYu" secondAttribute="bottom" id="jvv-d3-fDA"/>
-                            <constraint firstItem="rQH-IB-DYu" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="tRy-c2-ovq"/>
+                            <constraint firstItem="rn7-NF-pjh" firstAttribute="bottom" secondItem="41X-mk-p6Z" secondAttribute="top" constant="-10" id="fv6-Qd-5D7"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,6 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="redRectangle.png" width="60" height="60"/>
+        <image name="icon_river" width="120" height="120"/>
     </resources>
 </document>
