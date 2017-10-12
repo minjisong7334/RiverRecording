@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B2F6C7018E305CF3111F4B9C95B7A5E5"
+               BlueprintIdentifier = "DEC5D6CAC0D41B8C9A0346095661EF2F"
                BuildableName = "Pods_RiverRecording.framework"
                BlueprintName = "Pods-RiverRecording"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B2F6C7018E305CF3111F4B9C95B7A5E5"
+            BlueprintIdentifier = "DEC5D6CAC0D41B8C9A0346095661EF2F"
             BuildableName = "Pods_RiverRecording.framework"
             BlueprintName = "Pods-RiverRecording"
             ReferencedContainer = "container:Pods.xcodeproj">

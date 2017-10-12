@@ -8,19 +8,21 @@
 
 import Foundation
 import UIKit
-import KCFloatingActionButton
+import Floaty
 
 class DashboardViewController : UIViewController {
     
-    let fab = KCFloatingActionButton()
+    let fab = Floaty()
     
     override func viewDidLoad() {
         
         initButton()
         
-        }
+    }
     
     func initButton() {
+        fab.size = 54
+        fab.buttonColor = UIColor(red: 170/255.0, green: 50/255.0, blue: 55/255.0, alpha: 1)
         fab.openAnimationType = .slideLeft
         
         //Record, Category, Edit, Search
@@ -31,12 +33,12 @@ class DashboardViewController : UIViewController {
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
-                
+            
         })
         fab.addItem("Category", icon: UIImage(named: "btn_dash_menu_category")!)
         fab.addItem("Edit", icon: UIImage(named: "btn_dash_menu_edit")!)
         fab.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!)
-            
+        
         
         self.view.addSubview(fab)
     }

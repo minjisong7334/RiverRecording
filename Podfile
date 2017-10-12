@@ -7,7 +7,7 @@ target 'RiverRecording' do
 
   # Pods for RiverRecording
   pod 'Firebase'
-  pod 'KCFloatingActionButton', '~> 2.1'
+  pod 'Floaty', '~> 3.0.0'
 
   target 'RiverRecordingTests' do
     inherit! :search_paths
