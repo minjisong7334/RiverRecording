@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F449A781DA51A7B00183705 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A771DA51A7B00183705 /* HamburgerButton.swift */; };
 		4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A791DA524E400183705 /* DashboardViewController.swift */; };
 		4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A7A1DA524E400183705 /* RecordingViewController.swift */; };
 		4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */; };
@@ -43,7 +42,6 @@
 		39FA4DF08FB80EF069BFDC36 /* Pods-RiverRecordingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		46A44C7E4AE0F88384342DFD /* Pods-RiverRecordingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingUITests/Pods-RiverRecordingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C13DD2778C532147E7E3979 /* Pods_RiverRecordingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecordingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F449A771DA51A7B00183705 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		4F449A791DA524E400183705 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Sources/DashboardViewController.swift; sourceTree = "<group>"; };
 		4F449A7A1DA524E400183705 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = Sources/RecordingViewController.swift; sourceTree = "<group>"; };
 		4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -108,28 +106,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4F449A751DA51A4F00183705 /* Plugin */ = {
+		4F3AA9951F8FAA3800D8D408 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4F449A761DA51A7B00183705 /* HamburgerButton */,
+				4F449A791DA524E400183705 /* DashboardViewController.swift */,
+				4F449A7A1DA524E400183705 /* RecordingViewController.swift */,
 			);
-			name = Plugin;
-			sourceTree = "<group>";
-		};
-		4F449A761DA51A7B00183705 /* HamburgerButton */ = {
-			isa = PBXGroup;
-			children = (
-				4F449A771DA51A7B00183705 /* HamburgerButton.swift */,
-			);
-			name = HamburgerButton;
-			path = Plugins/HamburgerButton;
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		4FA20EE51DA09FF300EB92D0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4F449A791DA524E400183705 /* DashboardViewController.swift */,
-				4F449A7A1DA524E400183705 /* RecordingViewController.swift */,
+				4F3AA9951F8FAA3800D8D408 /* ViewController */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -159,9 +148,7 @@
 		4FF99A7A1D4728FD0014805A /* RiverRecording */ = {
 			isa = PBXGroup;
 			children = (
-				4F449A751DA51A4F00183705 /* Plugin */,
 				4FA20EE51DA09FF300EB92D0 /* Sources */,
-				4FF99AA91D472B350014805A /* Resources */,
 				4FF99A7B1D4728FD0014805A /* AppDelegate.swift */,
 				4FF99A821D4728FD0014805A /* Assets.xcassets */,
 				4F96BA141DA6936B009A0E78 /* Main.storyboard */,
@@ -188,13 +175,6 @@
 				4FF99A9D1D4728FD0014805A /* Info.plist */,
 			);
 			path = RiverRecordingUITests;
-			sourceTree = "<group>";
-		};
-		4FF99AA91D472B350014805A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		DAEA2E79202338141BBA62D8 /* Frameworks */ = {
@@ -374,14 +354,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RiverRecording/Pods-RiverRecording-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/KCFloatingActionButton/KCFloatingActionButton.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KCFloatingActionButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,7 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */,
-				4F449A781DA51A7B00183705 /* HamburgerButton.swift in Sources */,
 				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
 				4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */,
 			);
@@ -690,7 +669,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -708,7 +687,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk3.RiverRecording;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

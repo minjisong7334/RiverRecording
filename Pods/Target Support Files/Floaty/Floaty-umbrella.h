@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double KCFloatingActionButtonVersionNumber;
-FOUNDATION_EXPORT const unsigned char KCFloatingActionButtonVersionString[];
+FOUNDATION_EXPORT double FloatyVersionNumber;
+FOUNDATION_EXPORT const unsigned char FloatyVersionString[];
 
