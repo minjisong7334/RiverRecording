@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F160F321F8FB7D0004F24B1 /* RecordFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F160F311F8FB7D0004F24B1 /* RecordFile.swift */; };
+		4F160F351F8FB889004F24B1 /* RecordFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F160F341F8FB889004F24B1 /* RecordFileManager.swift */; };
 		4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A791DA524E400183705 /* DashboardViewController.swift */; };
 		4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A7A1DA524E400183705 /* RecordingViewController.swift */; };
 		4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */; };
@@ -42,6 +44,8 @@
 		39FA4DF08FB80EF069BFDC36 /* Pods-RiverRecordingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingTests/Pods-RiverRecordingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		46A44C7E4AE0F88384342DFD /* Pods-RiverRecordingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverRecordingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverRecordingUITests/Pods-RiverRecordingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C13DD2778C532147E7E3979 /* Pods_RiverRecordingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverRecordingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F160F311F8FB7D0004F24B1 /* RecordFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordFile.swift; sourceTree = "<group>"; };
+		4F160F341F8FB889004F24B1 /* RecordFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordFileManager.swift; sourceTree = "<group>"; };
 		4F449A791DA524E400183705 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Sources/DashboardViewController.swift; sourceTree = "<group>"; };
 		4F449A7A1DA524E400183705 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = Sources/RecordingViewController.swift; sourceTree = "<group>"; };
 		4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -106,6 +110,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4F160F301F8FB7BC004F24B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F160F311F8FB7D0004F24B1 /* RecordFile.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4F160F331F8FB875004F24B1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4F160F341F8FB889004F24B1 /* RecordFileManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		4F3AA9951F8FAA3800D8D408 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +138,8 @@
 		4FA20EE51DA09FF300EB92D0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4F160F301F8FB7BC004F24B1 /* Model */,
+				4F160F331F8FB875004F24B1 /* Manager */,
 				4F3AA9951F8FAA3800D8D408 /* ViewController */,
 			);
 			name = Sources;
@@ -497,8 +519,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F160F351F8FB889004F24B1 /* RecordFileManager.swift in Sources */,
 				4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */,
 				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
+				4F160F321F8FB7D0004F24B1 /* RecordFile.swift in Sources */,
 				4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
