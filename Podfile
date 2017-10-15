@@ -8,6 +8,7 @@ target 'RiverRecording' do
   # Pods for RiverRecording
   pod 'Firebase'
   pod 'Floaty', '~> 3.0.0'
+  pod 'KRProgressHUD'
 
   target 'RiverRecordingTests' do
     inherit! :search_paths

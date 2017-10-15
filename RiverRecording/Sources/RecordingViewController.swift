@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation 
+import KRProgressHUD
 
 class RecordingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -300,8 +301,6 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     func play() {
-        
-        
         do {
             let prefs = UserDefaults.standard
             let url = prefs.url(forKey: "Record")
@@ -329,7 +328,10 @@ extension RecordingViewController : AVAudioRecorderDelegate {
         alert.addAction(UIAlertAction(title: "Make", style: .default, handler: {action in
             print("Make was tapped")
             
-            
+            KRProgressHUD.show()
+            RecordFileManager.shared.makeRiver(recorder.url, recorder.currentTime) { _ in
+                KRProgressHUD.dismiss()
+            }
         }))
         alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: {action in
             print("delete was tapped")
