@@ -23,6 +23,9 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
     var captureDevice:AVCaptureDevice!
     var previewLayer:AVCaptureVideoPreviewLayer!
     
+    var startTime: Date!
+    var endTime: Date!
+    
     var meterTimer:Timer!
     
     var soundFileURL:URL!
@@ -100,6 +103,8 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
                     if setup {
                         self.setupRecorder()
                     }
+                    
+                    self.startTime = Date()
                     self.recorder.record()
 //                    self.meterTimer = Timer.scheduledTimer(timeInterval: 0.1,
 //                        target:self,
@@ -321,6 +326,8 @@ extension RecordingViewController : AVAudioRecorderDelegate {
                                          successfully flag: Bool) {
         print("finished recording \(flag)")
         
+        self.endTime = Date()
+        
         // iOS8 and later
         let alert = UIAlertController(title: "Recorder",
                                       message: "Finished Recording",
@@ -329,7 +336,7 @@ extension RecordingViewController : AVAudioRecorderDelegate {
             print("Make was tapped")
             
             KRProgressHUD.show()
-            RecordFileManager.shared.makeRiver(recorder.url, recorder.currentTime) { _ in
+            RecordFileManager.shared.makeRiver(recorder.url, self.startTime, self.endTime) { _ in
                 KRProgressHUD.dismiss()
             }
         }))

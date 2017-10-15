@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+import Photos
 
 protocol RecordFileManagerDelegate {
     func record()
@@ -21,8 +22,31 @@ final class RecordFileManager {
     
     static let shared = RecordFileManager()
     
-    func makeRiver(_ url: URL, _ time: TimeInterval, completion: @escaping (String) -> ()) {
-        completion("Finished")
+    func makeRiver(_ url: URL, _ startDate: Date, _ endDate: Date, completion: @escaping (String) -> ()) {
+
+        accessToPhotoLibrary()
+        
+        // Test code for HUD
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            completion("Finished")
+        }
+    }
+    
+    func accessToPhotoLibrary() {
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                print("GTG")
+                let fetchOptions = PHFetchOptions()
+                let allPhotos = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+                print("Found \(allPhotos.count) images")
+            case .denied, .restricted:
+                print("Not allowed")
+            case .notDetermined:
+                print("Not determined yet")
+                
+            }
+        }
     }
     
     
