@@ -24,7 +24,6 @@ final class RecordFileManager {
     
     static let shared = RecordFileManager()
 }
-
     
     //MARK: save
     //MARK: load

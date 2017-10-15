@@ -37,7 +37,9 @@ class DashboardViewController : UIViewController {
         })
         fab.addItem("Category", icon: UIImage(named: "btn_dash_menu_category")!)
         fab.addItem("Edit", icon: UIImage(named: "btn_dash_menu_edit")!)
-        fab.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!)
+        fab.addItem("Search", icon: UIImage(named: "btn_dash_menu_search")!) { _ in
+            self.performSegue(withIdentifier: "goToSearchVC", sender: nil)
+        }
         
         
         self.view.addSubview(fab)

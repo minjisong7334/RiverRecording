@@ -11,6 +11,9 @@
 		4F160F351F8FB889004F24B1 /* RecordFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F160F341F8FB889004F24B1 /* RecordFileManager.swift */; };
 		4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A791DA524E400183705 /* DashboardViewController.swift */; };
 		4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F449A7A1DA524E400183705 /* RecordingViewController.swift */; };
+		4F52E6311F93AA2100E52B30 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52E6301F93AA2100E52B30 /* SearchViewController.swift */; };
+		4F52E6341F93AD5400E52B30 /* SearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52E6331F93AD5400E52B30 /* SearchDataProvider.swift */; };
+		4F52E6361F93AF4900E52B30 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52E6351F93AF4900E52B30 /* RecordTableViewCell.swift */; };
 		4F70288E1D4E15DD005637D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */; };
 		4F96BA161DA6936B009A0E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F96BA141DA6936B009A0E78 /* Main.storyboard */; };
 		4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF99A7B1D4728FD0014805A /* AppDelegate.swift */; };
@@ -48,6 +51,9 @@
 		4F160F341F8FB889004F24B1 /* RecordFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordFileManager.swift; sourceTree = "<group>"; };
 		4F449A791DA524E400183705 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Sources/DashboardViewController.swift; sourceTree = "<group>"; };
 		4F449A7A1DA524E400183705 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = Sources/RecordingViewController.swift; sourceTree = "<group>"; };
+		4F52E6301F93AA2100E52B30 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4F52E6331F93AD5400E52B30 /* SearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataProvider.swift; sourceTree = "<group>"; };
+		4F52E6351F93AF4900E52B30 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		4F70288D1D4E15DD005637D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F96BA151DA6936B009A0E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FF99A781D4728FD0014805A /* RiverRecording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverRecording.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				4F160F311F8FB7D0004F24B1 /* RecordFile.swift */,
+				4F52E6351F93AF4900E52B30 /* RecordTableViewCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -130,14 +137,24 @@
 			isa = PBXGroup;
 			children = (
 				4F449A791DA524E400183705 /* DashboardViewController.swift */,
+				4F52E6301F93AA2100E52B30 /* SearchViewController.swift */,
 				4F449A7A1DA524E400183705 /* RecordingViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		4F52E6321F93AD4700E52B30 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				4F52E6331F93AD5400E52B30 /* SearchDataProvider.swift */,
+			);
+			name = DataProvider;
+			sourceTree = "<group>";
+		};
 		4FA20EE51DA09FF300EB92D0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4F52E6321F93AD4700E52B30 /* DataProvider */,
 				4F160F301F8FB7BC004F24B1 /* Model */,
 				4F160F331F8FB875004F24B1 /* Manager */,
 				4F3AA9951F8FAA3800D8D408 /* ViewController */,
@@ -519,10 +536,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F52E6311F93AA2100E52B30 /* SearchViewController.swift in Sources */,
 				4F160F351F8FB889004F24B1 /* RecordFileManager.swift in Sources */,
 				4F449A7C1DA524E400183705 /* RecordingViewController.swift in Sources */,
 				4FF99A7C1D4728FD0014805A /* AppDelegate.swift in Sources */,
+				4F52E6341F93AD5400E52B30 /* SearchDataProvider.swift in Sources */,
 				4F160F321F8FB7D0004F24B1 /* RecordFile.swift in Sources */,
+				4F52E6361F93AF4900E52B30 /* RecordTableViewCell.swift in Sources */,
 				4F449A7B1DA524E400183705 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

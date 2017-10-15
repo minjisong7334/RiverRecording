@@ -13,7 +13,7 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
 
     // UI part
     @IBOutlet var recBtn: UIButton!
-    @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var playBtn: UIButton!
     
     // AV part
     var recorder:AVAudioRecorder!
@@ -27,20 +27,19 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
     var soundFileURL:URL!
     
     var isRecording:Bool!
+    var isPlaying:Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Boolean set up
         isRecording = false
-        
-        // UI change
-        initRecBtnImage()
+        isPlaying = false
         
         // AV init
-//        setSessionPlayback()
-//        askForNotifications()
-//        checkHeadphones()
+        setSessionPlayback()
+        askForNotifications()
+        checkHeadphones()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,29 +49,12 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
         player = nil
     }
     
-    func initRecBtnImage() {
-        recBtn.imageView!.layer.cornerRadius = recBtn.imageView!.frame.height/2
-        recBtn.setImage(recBtn.imageView!.image, for:UIControlState())
-    }
-    
-    func changeRecBtnImage() {
-        if (isRecording == true) {
-            recBtn.imageView!.layer.cornerRadius = 0
-            recBtn.setImage(recBtn.imageView!.image, for:UIControlState())
-        } else {
-            recBtn.imageView!.layer.cornerRadius = recBtn.imageView!.frame.height/2
-            recBtn.setImage(recBtn.imageView!.image, for:UIControlState())
-        }
-        
-    }
-    
 // MARK: Record
     
-    @IBAction func pressRecButton(_ sender: UIButton) {
+    @IBAction func pressRecBtn(_ sender: UIButton) {
         print("rec btn pressed")
         // UI change
         isRecording = !isRecording
-        changeRecBtnImage()
         
         if isRecording == true { // Recording Stop
             record()
@@ -141,17 +123,20 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         self.soundFileURL = documentsDirectory.appendingPathComponent(currentFileName)
         
+        let prefs = UserDefaults.standard
+        prefs.set(self.soundFileURL, forKey: "Record")
+        prefs.synchronize()
+        
         if FileManager.default.fileExists(atPath: soundFileURL.absoluteString) {
             // probably won't happen. want to do something about it?
             print("soundfile \(soundFileURL.absoluteString) exists")
         }
         
         let recordSettings:[String : AnyObject] = [
-            AVFormatIDKey: NSNumber(value: kAudioFormatAppleLossless as UInt32),
-            AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue as AnyObject,
-            AVEncoderBitRateKey : 320000 as AnyObject,
-            AVNumberOfChannelsKey: 2 as AnyObject,
-            AVSampleRateKey : 44100.0 as AnyObject
+            AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC as UInt32),
+            AVEncoderAudioQualityKey : AVAudioQuality.min.rawValue as AnyObject,
+            AVNumberOfChannelsKey: 1 as AnyObject,
+            AVSampleRateKey : 12000.0 as AnyObject
         ]
         
         do {
@@ -168,12 +153,14 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
     
     func setSessionPlayAndRecord() {
         let session = AVAudioSession.sharedInstance()
+        
         do {
-            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with: .defaultToSpeaker)
         } catch let error as NSError {
             print("could not set session category")
             print(error.localizedDescription)
         }
+        
         do {
             try session.setActive(true)
         } catch let error as NSError {
@@ -199,105 +186,134 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
             print(error.localizedDescription)
         }
         
-        //recorder = nil
+        recorder = nil
+    }
+    
+    func setSessionPlayback() {
+        let session:AVAudioSession = AVAudioSession.sharedInstance()
+
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+        } catch let error as NSError {
+            print("Fail: set session category")
+            print(error.localizedDescription)
+        }
+        do {
+            try session.setActive(true)
+        } catch let error as NSError {
+            print("Fail: make session active")
+            print(error.localizedDescription)
+        }
+    }
+
+    func askForNotifications() {
+
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(RecordingViewController.background(_:)),
+                                               name:NSNotification.Name.UIApplicationWillResignActive,
+                                               object:nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(RecordingViewController.foreground(_:)),
+                                               name:NSNotification.Name.UIApplicationWillEnterForeground,
+                                               object:nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(RecordingViewController.routeChange(_:)),
+                                               name:NSNotification.Name.AVAudioSessionRouteChange,
+                                               object:nil)
+    }
+
+    @objc func background(_ notification:Notification) {
+        print("background")
+    }
+
+    @objc func foreground(_ notification:Notification) {
+        print("foreground")
+    }
+
+
+    @objc func routeChange(_ notification:Notification) {
+        print("routeChange \(String(describing: (notification as NSNotification).userInfo))")
+
+        if let userInfo = (notification as NSNotification).userInfo {
+            //print("userInfo \(userInfo)")
+            if let reason = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt {
+                //print("reason \(reason)")
+                switch AVAudioSessionRouteChangeReason(rawValue: reason)! {
+                case AVAudioSessionRouteChangeReason.newDeviceAvailable:
+                    print("NewDeviceAvailable")
+                    print("did you plug in headphones?")
+                    checkHeadphones()
+                case AVAudioSessionRouteChangeReason.oldDeviceUnavailable:
+                    print("OldDeviceUnavailable")
+                    print("did you unplug headphones?")
+                    checkHeadphones()
+                case AVAudioSessionRouteChangeReason.categoryChange:
+                    print("CategoryChange")
+                case AVAudioSessionRouteChangeReason.override:
+                    print("Override")
+                case AVAudioSessionRouteChangeReason.wakeFromSleep:
+                    print("WakeFromSleep")
+                case AVAudioSessionRouteChangeReason.unknown:
+                    print("Unknown")
+                case AVAudioSessionRouteChangeReason.noSuitableRouteForCategory:
+                    print("NoSuitableRouteForCategory")
+                case AVAudioSessionRouteChangeReason.routeConfigurationChange:
+                    print("RouteConfigurationChange")
+
+                }
+            }
+        }
+
+    }
+
+    func checkHeadphones() {
+        // check NewDeviceAvailable and OldDeviceUnavailable for them being plugged in/unplugged
+        let currentRoute = AVAudioSession.sharedInstance().currentRoute
+        if currentRoute.outputs.count > 0 {
+            for description in currentRoute.outputs {
+                if description.portType == AVAudioSessionPortHeadphones {
+                    print("headphones are plugged in")
+                    break
+                } else {
+                    print("headphones are unplugged")
+                }
+            }
+        } else {
+            print("checking headphones requires a connection to a device")
+        }
+    }
+    
+    //MARK: Play
+    @IBAction func pressPlayBtn(_ sender: UIButton) {
+        
+        isPlaying = !isPlaying
+        
+        if (!isPlaying) {
+            play()
+//            player.play()
+        } else {
+            stop()
+//            player.stop()
+        }
+    }
+    
+    func play() {
+        
+        
+        do {
+            let prefs = UserDefaults.standard
+            let url = prefs.url(forKey: "Record")
+            try player = AVAudioPlayer(contentsOf: url!)
+            player.delegate = self
+            player.play()
+        } catch {
+            print("Audioplayer error: \(error.localizedDescription)")
+        }
+        
     }
 }
-    
-//    func setSessionPlayback() {
-//        let session:AVAudioSession = AVAudioSession.sharedInstance()
-//
-//        do {
-//            try session.setCategory(AVAudioSessionCategoryPlayback)
-//        } catch let error as NSError {
-//            print("Fail: set session category")
-//            print(error.localizedDescription)
-//        }
-//        do {
-//            try session.setActive(true)
-//        } catch let error as NSError {
-//            print("Fail: make session active")
-//            print(error.localizedDescription)
-//        }
-//    }
-//
-//    func askForNotifications() {
-//
-//        NotificationCenter.default.addObserver(self,
-//                                                         selector:#selector(RecordingViewController.background(_:)),
-//                                                         name:NSNotification.Name.UIApplicationWillResignActive,
-//                                                         object:nil)
-//
-//        NotificationCenter.default.addObserver(self,
-//                                                         selector:#selector(RecordingViewController.foreground(_:)),
-//                                                         name:NSNotification.Name.UIApplicationWillEnterForeground,
-//                                                         object:nil)
-//
-//        NotificationCenter.default.addObserver(self,
-//                                                         selector:#selector(RecordingViewController.routeChange(_:)),
-//                                                         name:NSNotification.Name.AVAudioSessionRouteChange,
-//                                                         object:nil)
-//    }
-    
-//    func background(_ notification:Notification) {
-//        print("background")
-//    }
-//
-//    func foreground(_ notification:Notification) {
-//        print("foreground")
-//    }
-//
-    
-//    func routeChange(_ notification:Notification) {
-//        print("routeChange \((notification as NSNotification).userInfo)")
-//
-//        if let userInfo = (notification as NSNotification).userInfo {
-//            //print("userInfo \(userInfo)")
-//            if let reason = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt {
-//                //print("reason \(reason)")
-//                switch AVAudioSessionRouteChangeReason(rawValue: reason)! {
-//                case AVAudioSessionRouteChangeReason.newDeviceAvailable:
-//                    print("NewDeviceAvailable")
-//                    print("did you plug in headphones?")
-//                    checkHeadphones()
-//                case AVAudioSessionRouteChangeReason.oldDeviceUnavailable:
-//                    print("OldDeviceUnavailable")
-//                    print("did you unplug headphones?")
-//                    checkHeadphones()
-//                case AVAudioSessionRouteChangeReason.categoryChange:
-//                    print("CategoryChange")
-//                case AVAudioSessionRouteChangeReason.override:
-//                    print("Override")
-//                case AVAudioSessionRouteChangeReason.wakeFromSleep:
-//                    print("WakeFromSleep")
-//                case AVAudioSessionRouteChangeReason.unknown:
-//                    print("Unknown")
-//                case AVAudioSessionRouteChangeReason.noSuitableRouteForCategory:
-//                    print("NoSuitableRouteForCategory")
-//                case AVAudioSessionRouteChangeReason.routeConfigurationChange:
-//                    print("RouteConfigurationChange")
-//
-//                }
-//            }
-//        }
-//
-//    }
-//
-//    func checkHeadphones() {
-//        // check NewDeviceAvailable and OldDeviceUnavailable for them being plugged in/unplugged
-//        let currentRoute = AVAudioSession.sharedInstance().currentRoute
-//        if currentRoute.outputs.count > 0 {
-//            for description in currentRoute.outputs {
-//                if description.portType == AVAudioSessionPortHeadphones {
-//                    print("headphones are plugged in")
-//                    break
-//                } else {
-//                    print("headphones are unplugged")
-//                }
-//            }
-//        } else {
-//            print("checking headphones requires a connection to a device")
-//        }
-//    }
 
 // MARK: AVAudioRecorderDelegate
 extension RecordingViewController : AVAudioRecorderDelegate {
@@ -310,8 +326,10 @@ extension RecordingViewController : AVAudioRecorderDelegate {
         let alert = UIAlertController(title: "Recorder",
                                       message: "Finished Recording",
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Keep", style: .default, handler: {action in
-            print("keep was tapped")
+        alert.addAction(UIAlertAction(title: "Make", style: .default, handler: {action in
+            print("Make was tapped")
+            
+            
         }))
         alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: {action in
             print("delete was tapped")
@@ -332,15 +350,16 @@ extension RecordingViewController : AVAudioRecorderDelegate {
 
 //
 //// MARK: AVAudioPlayerDelegate
-//extension RecordingViewController : AVAudioPlayerDelegate {
-//    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-//        print("finished playing \(flag)")
-//    }
-//    
-//    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
-//        if let e = error {
-//            print("\(e.localizedDescription)")
-//        }
-//        
-//    }
-//}
+extension RecordingViewController : AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("finished playing \(flag)")
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        if let e = error {
+            print("\(e.localizedDescription)")
+        }
+        
+    }
+}
+
