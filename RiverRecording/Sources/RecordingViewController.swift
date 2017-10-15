@@ -13,10 +13,6 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
 
     // UI part
     @IBOutlet var recBtn: UIButton!
-    @IBOutlet var photoBtn: UIButton!
-    
-    @IBOutlet var photoImg: UIImageView!
-    
     @IBOutlet var statusLabel: UILabel!
     
     // AV part
@@ -26,8 +22,6 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
     var captureDevice:AVCaptureDevice!
     var previewLayer:AVCaptureVideoPreviewLayer!
     
-    var imagePicker:UIImagePickerController!
-    
     var meterTimer:Timer!
     
     var soundFileURL:URL!
@@ -36,9 +30,6 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // UI Image Set up
         
         // Boolean set up
         isRecording = false
@@ -167,7 +158,7 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
             recorder = try AVAudioRecorder(url: soundFileURL, settings: recordSettings)
             recorder.delegate = self
             recorder.isMeteringEnabled = true
-            recorder.prepareToRecord() // creates/overwrites the file at soundFileURL
+            recorder.prepareToRecord() // creates/overwrites the file at sound as! AVAudioRecorderDelegateFileURL
         } catch let error as NSError {
             recorder = nil
             print(error.localizedDescription)
@@ -210,6 +201,7 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
         
         //recorder = nil
     }
+}
     
 //    func setSessionPlayback() {
 //        let session:AVAudioSession = AVAudioSession.sharedInstance()
@@ -306,46 +298,6 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
 //            print("checking headphones requires a connection to a device")
 //        }
 //    }
-    
-// MARK: Photo
-    
-    @IBAction func pressPhotoButton(_ sender: UIButton) {
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-//            imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
-//            imagePicker.allowsEditing = false
-//            self.present(imagePicker, animated: true, completion: nil)
-//        }
-    }
-//    
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-//        let tempImage:UIImage = image
-//        photoImg.image  = tempImage
-//        
-//        dismiss(animated: true, completion: nil)
-//    }
-//    
-//// MARK: AudioMeter
-//    
-//    func updateAudioMeter(_ timer:Timer) {
-//        
-//        if recorder.isRecording {
-//            let min = Int(recorder.currentTime / 60)
-//            let sec = Int(recorder.currentTime.truncatingRemainder(dividingBy: 60))
-//            
-//            let s = String(format: "%02d:%02d", min, sec)
-//
-//            recorder.updateMeters()
-//            // if you want to draw some graphics...
-//            let apc0 = recorder.averagePower(forChannel: 0)
-//            let peak0 = recorder.peakPower(forChannel: 0)
-//            
-//            statusLabel.text = apc0.description + " " + peak0.description + " " + s
-//        }
-//    }
-}
-
 
 // MARK: AVAudioRecorderDelegate
 extension RecordingViewController : AVAudioRecorderDelegate {
@@ -376,6 +328,8 @@ extension RecordingViewController : AVAudioRecorderDelegate {
         }
     }
 }
+
+
 //
 //// MARK: AVAudioPlayerDelegate
 //extension RecordingViewController : AVAudioPlayerDelegate {
