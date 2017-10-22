@@ -192,7 +192,7 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
             print(error.localizedDescription)
         }
         
-        recorder = nil
+        
     }
     
     func setSessionPlayback() {
@@ -317,6 +317,16 @@ class RecordingViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
     }
+    
+    //MARK: Camera
+    @IBAction func pressCameraBtn(_ sender: UIButton) {
+        UIApplication.shared.openURL(URL(string: "photos-redirect://")!)
+    }
+    
+    //MARK: Setting
+    @IBAction func pressSettingBtn(_ sender: UIButton) {
+//        UIApplication.shared.openURL(URL(string: "photos-redirect://")!)
+    }
 }
 
 // MARK: AVAudioRecorderDelegate
@@ -335,6 +345,8 @@ extension RecordingViewController : AVAudioRecorderDelegate {
         alert.addAction(UIAlertAction(title: "Make", style: .default, handler: {action in
             print("Make was tapped")
             
+            self.recorder = nil
+            
             KRProgressHUD.show()
             RecordFileManager.shared.makeRiver(recorder.url, self.startTime, self.endTime) { _ in
                 KRProgressHUD.dismiss()
@@ -343,6 +355,8 @@ extension RecordingViewController : AVAudioRecorderDelegate {
         alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: {action in
             print("delete was tapped")
             self.recorder.deleteRecording()
+            
+            self.recorder = nil
         }))
         self.present(alert, animated:true, completion:nil)
     }
